@@ -54,11 +54,10 @@ function capitalizeWords(arr) {
   let newArr = [];
   // recursive stack
   // base case
-  if ((arr.length = 0)) return;
+  if ((arr.length = 0)) return newArr;
   // main logic
   for (let idx in arr) {
     newArr.push(arr[idx].toUpperCase());
     capitalizeWords(arr[idx + 1]);
   }
-  return newArr;
 }
