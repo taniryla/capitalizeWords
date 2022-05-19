@@ -59,7 +59,7 @@ function capitalizeWords(arr) {
   }
   // main logic
   let newArr = capitalizeWords(arr.slice(0, -1))
-  newArr.push(arr.slice(arr.length - 1)[0]));
+  newArr.push(arr.slice(arr.length - 1)[0].toUpperCase()));
   return newArr;
-  }
+  }s
 }
