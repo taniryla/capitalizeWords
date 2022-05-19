@@ -50,4 +50,15 @@
 // 20.  Can you improve the performance?
 // 21.   How have other people solved this problem?
 
-function capitalizeWords(arr) {}
+function capitalizeWords(arr) {
+  let newArr = [];
+  // recursive stack
+  // base case
+  if (arr.length === 0) return;
+  // main logic
+  for (let idx in arr) {
+    newArr.push(arr[idx].toUpperCase());
+    capitalizeWords(arr[idx + 1]);
+  }
+  return newArr;
+}
