@@ -54,7 +54,7 @@ function capitalizeWords(arr) {
   let newArr = [];
   // recursive stack
   // base case
-  if (arr.length === 0) return;
+  if ((arr.length = 0)) return;
   // main logic
   for (let idx in arr) {
     newArr.push(arr[idx].toUpperCase());
