@@ -51,13 +51,15 @@
 // 21.   How have other people solved this problem?
 
 function capitalizeWords(arr) {
-  let newArr = [];
   // recursive stack
   // base case
-  if (arr.length === 0) return newArr;
+  if (arr.length === 1) {
+    return [arr[0].toUpperCase()];
+
+  }
   // main logic
-  for (let idx in arr) {
-    newArr.push(arr[idx].toUpperCase());
-    capitalizeWords(arr.slice(1));
+  let newArr = capitalizeWords(arr.slice(0, -1))
+  newArr.push(arr.slice(arr.length - 1)[0]));
+  return newArr;
   }
 }
